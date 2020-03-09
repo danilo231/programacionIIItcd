@@ -1,0 +1,6 @@
+D:\daniel\programacionIII\examen\examen\bin\Debug\examen.exe.config
+D:\daniel\programacionIII\examen\examen\bin\Debug\examen.exe
+D:\daniel\programacionIII\examen\examen\bin\Debug\examen.pdb
+D:\daniel\programacionIII\examen\examen\obj\Debug\examen.csprojAssemblyReference.cache
+D:\daniel\programacionIII\examen\examen\obj\Debug\examen.exe
+D:\daniel\programacionIII\examen\examen\obj\Debug\examen.pdb
