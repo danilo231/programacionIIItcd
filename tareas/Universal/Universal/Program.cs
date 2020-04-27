@@ -18,7 +18,7 @@ namespace Universal
                 Persona Daniel = fabricapersonas.getPersona("alumno");
                 
 
-                Daniel.setDatos("Daniel", "Cuellar", Sexo.Masculino, "25/03/199*", 7559308, "danilo231@gmail.com");
+                Daniel.setDatos("Daniel", "Chamoso", Sexo.Masculino, "25/03/199*", 7559308, "danilo231@gmail.com");
                 Console.WriteLine(Daniel.getDatos());
                 FabricaAula fabricaaulas = new FabricaAula();
 
@@ -37,7 +37,7 @@ namespace Universal
                 Console.WriteLine(a.getDatos());
                 
 
-                Console.WriteLine(a);
+                Console.WriteLine(c);
                
              
 

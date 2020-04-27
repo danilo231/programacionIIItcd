@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Universal
 {
-    class Persona
+    abstract class Persona
     {
         protected String nombres;
         protected String apellidos;
