@@ -10,60 +10,63 @@ namespace Snack
     {
         static void Main(string[] args)
         {
-            ProductoSimple carne = new ProductoSimple("Carne", 4, "carne");
-            ProductoSimple tomate = new ProductoSimple("tomate", 0.5, "tomate");
 
-            ProductoSimple lechuga = new ProductoSimple("lechuga", 0.5, "lechuga");
-            ProductoSimple tocino = new ProductoSimple("tocino", 2, "tocino");
+            IngredienteSimple tomate = new IngredienteSimple("tomate",4);
+            IngredienteSimple carne = new IngredienteSimple( "carne",4 );
+            
 
-            ProductoSimple soda = new ProductoSimple("soda", 2, "soda");
-            ProductoSimple papasfritas = new ProductoSimple("papasfritas", 1.5, "papafritas");
 
-            ProductoSimple queso = new ProductoSimple("queso", 1, "queso");
+            IngredienteSimple lechuga = new IngredienteSimple("lechigua", 0.5);
+            IngredienteSimple tocino = new IngredienteSimple("tocino", 2);
+
+            IngredienteSimple soda = new IngredienteSimple("soda", 2);
+            IngredienteSimple papasfritas = new IngredienteSimple("papasfritas", 1.5);
+
+            IngredienteSimple queso = new IngredienteSimple("queso", 1 );
 
 
 
             ProductoCompuesto simple = new ProductoCompuesto("Simple");
-            simple.insertarProducto(carne);
-            simple.insertarProducto(tomate);
-            simple.insertarProducto(lechuga);
+            simple.insertarIngrediente(carne);
+            simple.insertarIngrediente(tomate);
+            simple.insertarIngrediente(lechuga);
 
 
 
-            ProductoCompuesto casaPC = new ProductoCompuesto("de queso");
-            casaPC.insertarProducto(carne);
-            casaPC.insertarProducto(tomate);
-            casaPC.insertarProducto(lechuga);
-            casaPC.insertarProducto(queso);
+            ProductoCompuesto HSimple = new ProductoCompuesto("de queso");
+            HSimple.insertarIngrediente(carne);
+            HSimple.insertarIngrediente(tomate);
+            HSimple.insertarIngrediente(lechuga);
+            HSimple.insertarIngrediente(queso);
 
             ProductoCompuesto hamburguesaD = new ProductoCompuesto("de queso");
-            hamburguesaD.insertarProducto(carne);
-            hamburguesaD.insertarProducto(carne);
-            hamburguesaD.insertarProducto(tomate);
-            hamburguesaD.insertarProducto(lechuga);
-            hamburguesaD.insertarProducto(queso);
+            hamburguesaD.insertarIngrediente(carne);
+            hamburguesaD.insertarIngrediente(carne);
+            hamburguesaD.insertarIngrediente(tomate);
+            hamburguesaD.insertarIngrediente(lechuga);
+            hamburguesaD.insertarIngrediente(queso);
 
             ProductoCompuesto hamburguesaT = new ProductoCompuesto("de queso");
-            hamburguesaT.insertarProducto(carne);
-            hamburguesaT.insertarProducto(tocino);
-            hamburguesaT.insertarProducto(tomate);
-            hamburguesaT.insertarProducto(lechuga);
-            hamburguesaT.insertarProducto(queso);
+            hamburguesaT.insertarIngrediente(carne);
+            hamburguesaT.insertarIngrediente(tocino);
+            hamburguesaT.insertarIngrediente(tomate);
+            hamburguesaT.insertarIngrediente(lechuga);
+            hamburguesaT.insertarIngrediente(queso);
 
            
             ProductoCompuesto h2x1 = new ProductoCompuesto("COMBO 1");
-            h2x1.insertarProducto(simple);
-            h2x1.insertarProducto(soda);
-            h2x1.insertarProducto(papasfritas);
+            h2x1.insertarIngrediente(simple);
+            h2x1.insertarIngrediente(soda);
+            h2x1.insertarIngrediente(papasfritas);
 
             ProductoCompuesto c2 = new ProductoCompuesto("COMBO 2");
-            c2.insertarProducto(queso);
-            c2.insertarProducto(queso);
-            c2.insertarProducto(papasfritas);
+            c2.insertarIngrediente(queso);
+            c2.insertarIngrediente(queso);
+            c2.insertarIngrediente(papasfritas);
 
             ProductoCompuesto SC = new ProductoCompuesto("SUPER COMBO");
-            SC.insertarProducto(h2x1);
-            SC.insertarProducto(c2);
+            SC.insertarIngrediente(h2x1);
+            SC.insertarIngrediente(c2);
 
             OrdenCompra gammerOrden = new OrdenCompra(1, "Juan Perez");
             gammerOrden.insertarProducto(h2x1);

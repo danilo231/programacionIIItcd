@@ -8,35 +8,38 @@ namespace Snack
 {
     class ProductoCompuesto:AbstractProducto
     {
-        private List<AbstractProducto> productos = new List<AbstractProducto>();
+        private List<AbstractProducto> componentes = new List<AbstractProducto>();
+        
+
+        
+        protected double descuento;
 
         public ProductoCompuesto(String nombre)
         {
             this.nombre = nombre;
 
         }
-        public void setPrice(double price)
-        {
-            
-        }
+       
 
-        public void insertarProducto(AbstractProducto product)
+        public void insertarIngrediente(AbstractProducto componente)
         {
-            this.productos.Add(product);
+            this.componentes.Add(componente);
         }
 
         public bool eliminarProductos(AbstractProducto producto)
         {
-            return this.productos.Remove(producto);
+            return this.componentes.Remove(producto);
         }
 
         public override double getPrecio()
         {
             double precio = 0;
-            foreach (AbstractProducto producto in productos)
+            foreach (AbstractProducto producto in componentes)
             {
                 precio += producto.getPrecio();
+                
             }
+            precio = precio - descuento;
             return precio;
 
         }

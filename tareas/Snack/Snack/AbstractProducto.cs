@@ -9,7 +9,7 @@ namespace Snack
     abstract class AbstractProducto
     {
         protected String nombre;
-        protected double precio;
+
 
 
         public String getNombre()
@@ -23,11 +23,8 @@ namespace Snack
         }
 
         public abstract double getPrecio();
+        
 
 
-        public void setPrice(double combo)
-        {
-            this.precio = combo;
-        }
     }
 }

@@ -19,7 +19,7 @@ namespace Snack
             this.idOrden = idOrden;
             this.cliente = cliente;
             listaProductos = new List<AbstractProducto>();
-            //fecha = Calendar.;
+            
         }
 
         public long getidOrden()
@@ -86,14 +86,14 @@ namespace Snack
         public void imprimirOrden()
         {
 
-            Console.WriteLine("=============================================nOrden: " + idOrden + "nCliente: " + cliente);
+            Console.WriteLine(".....................................nOrden: " + idOrden + "nCliente: " + cliente);
             foreach (AbstractProducto producto in listaProductos)
             {
 
                 Console.WriteLine("{0}               {1}", producto.getNombre(), producto.getPrecio());
 
             }
-            Console.WriteLine("Total: {0} =============================================", getPrecio());
+            Console.WriteLine("Total: {0} .......................................", getPrecio());
         }
     }
 }

@@ -46,7 +46,7 @@
     <Compile Include="AbstractProducto.cs" />
     <Compile Include="OrdenCompra.cs" />
     <Compile Include="ProductoCompuesto.cs" />
-    <Compile Include="ProductoSimple.cs" />
+    <Compile Include="IngredienteSimple.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
