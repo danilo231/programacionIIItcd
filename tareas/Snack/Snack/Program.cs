@@ -11,9 +11,9 @@ namespace Snack
         static void Main(string[] args)
         {
 
-            IngredienteSimple tomate = new IngredienteSimple("tomate",4);
-            IngredienteSimple carne = new IngredienteSimple( "carne",4 );
-            
+            IngredienteSimple tomate = new IngredienteSimple("tomate", 2);
+            IngredienteSimple carne = new IngredienteSimple("carne", 4);
+
 
 
             IngredienteSimple lechuga = new IngredienteSimple("lechigua", 0.5);
@@ -22,51 +22,55 @@ namespace Snack
             IngredienteSimple soda = new IngredienteSimple("soda", 2);
             IngredienteSimple papasfritas = new IngredienteSimple("papasfritas", 1.5);
 
-            IngredienteSimple queso = new IngredienteSimple("queso", 1 );
+            IngredienteSimple queso = new IngredienteSimple("queso", 1);
 
+          
 
-
-            ProductoCompuesto simple = new ProductoCompuesto("Simple");
+            ProductoCompuesto simple = new ProductoCompuesto("Simple", 0);
             simple.insertarIngrediente(carne);
             simple.insertarIngrediente(tomate);
             simple.insertarIngrediente(lechuga);
 
 
 
-            ProductoCompuesto HSimple = new ProductoCompuesto("de queso");
+            ProductoCompuesto HSimple = new ProductoCompuesto("de queso", 0);
             HSimple.insertarIngrediente(carne);
             HSimple.insertarIngrediente(tomate);
             HSimple.insertarIngrediente(lechuga);
             HSimple.insertarIngrediente(queso);
 
-            ProductoCompuesto hamburguesaD = new ProductoCompuesto("de queso");
+            ProductoCompuesto hamburguesaD = new ProductoCompuesto("de queso", 0);
             hamburguesaD.insertarIngrediente(carne);
             hamburguesaD.insertarIngrediente(carne);
             hamburguesaD.insertarIngrediente(tomate);
             hamburguesaD.insertarIngrediente(lechuga);
             hamburguesaD.insertarIngrediente(queso);
 
-            ProductoCompuesto hamburguesaT = new ProductoCompuesto("de queso");
+            ProductoCompuesto hamburguesaT = new ProductoCompuesto("de queso", 0);
             hamburguesaT.insertarIngrediente(carne);
             hamburguesaT.insertarIngrediente(tocino);
             hamburguesaT.insertarIngrediente(tomate);
             hamburguesaT.insertarIngrediente(lechuga);
             hamburguesaT.insertarIngrediente(queso);
 
-           
-            ProductoCompuesto h2x1 = new ProductoCompuesto("COMBO 1");
+
+            ProductoCompuesto h2x1 = new ProductoCompuesto("COMBO 1", 1);
             h2x1.insertarIngrediente(simple);
             h2x1.insertarIngrediente(soda);
             h2x1.insertarIngrediente(papasfritas);
+            
 
-            ProductoCompuesto c2 = new ProductoCompuesto("COMBO 2");
+            ProductoCompuesto c2 = new ProductoCompuesto("COMBO 2",2);
             c2.insertarIngrediente(queso);
             c2.insertarIngrediente(queso);
             c2.insertarIngrediente(papasfritas);
+           
 
-            ProductoCompuesto SC = new ProductoCompuesto("SUPER COMBO");
+            ProductoCompuesto SC = new ProductoCompuesto("SUPER COMBO",3);
             SC.insertarIngrediente(h2x1);
             SC.insertarIngrediente(c2);
+          
+
 
             OrdenCompra gammerOrden = new OrdenCompra(1, "Juan Perez");
             gammerOrden.insertarProducto(h2x1);

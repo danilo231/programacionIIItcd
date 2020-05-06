@@ -14,9 +14,10 @@ namespace Snack
         
         protected double descuento;
 
-        public ProductoCompuesto(String nombre)
+        public ProductoCompuesto(String nombre, double descuento)
         {
             this.nombre = nombre;
+            this.descuento = descuento;
 
         }
        
