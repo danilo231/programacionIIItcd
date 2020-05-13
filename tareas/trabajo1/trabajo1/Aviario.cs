@@ -1,32 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace trabajo1
 {
-    class Jaula
+     class Aviario
     {
-        protected Mamiferos animal;
+        protected Aves ave;
         protected double alto;
         protected double ancho;
         protected double largo;
-
-        public Jaula(Mamiferos animal, double alto, double ancho, double largo)
+        public Aviario(Aves ave, double alto, double ancho, double largo)
         {
-            this.animal = animal;
+            this.ave = ave;
             this.alto = alto;
             this.ancho = ancho;
             this.largo = largo;
         }
-        public Mamiferos getAnimal()
+        public Aves getAve()
         {
-            return animal;
+            return ave;
         }
-        public void setAnimal(Mamiferos animal)
+        public void setAve(Aves ave)
         {
-            this.animal = animal;
+            this.ave = ave;
         }
 
         public double getAlto()
@@ -46,6 +41,11 @@ namespace trabajo1
             this.ancho = ancho;
         }
 
+        internal static void Add(Aviario aviario)
+        {
+            throw new NotImplementedException();
+        }
+
         public double getLargo()
         {
             return largo;
@@ -54,6 +54,5 @@ namespace trabajo1
         {
             this.largo = largo;
         }
-
     }
 }

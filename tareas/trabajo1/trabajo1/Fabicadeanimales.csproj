@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acuario.cs" />
     <Compile Include="Aguila.cs" />
     <Compile Include="Aves.cs" />
+    <Compile Include="Aviario.cs" />
     <Compile Include="Condor.cs" />
     <Compile Include="FabricaAbstracta.cs" />
     <Compile Include="FabricaAves.cs" />

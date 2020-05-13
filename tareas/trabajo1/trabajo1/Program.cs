@@ -12,47 +12,78 @@ namespace Fabricadeanimales
         static void Main(string[] args)
         {
             int opcion = 0;
-            Mamiferos f = new Mamiferos();
+            FabricaMamiferos f = new FabricaMamiferos();
+            Zoologico z = new Zoologico("SantaCruz","3eranillo",72855884);
             while (opcion != 7)
             {
                 Console.Clear();
-                Console.WriteLine("1. Ingresar Pila");
-                Console.WriteLine("2. Eliminar Pila");
-                Console.WriteLine("3. Mostrar Pila");
-                Console.WriteLine("4. Ingresar Cola");
-                Console.WriteLine("5. Eliminar Cola");
-                Console.WriteLine("6. Mostrar Cola");
+                Console.WriteLine("1. Ingresar mamifero");
+              
+                Console.WriteLine("2. Mostrar jaula");
+                Console.WriteLine("3. Ingresar ave");
+                Console.WriteLine("4. Mostrar Aviario");
+                Console.WriteLine("5. Ingresar pez");
+                Console.WriteLine("6. Mostrar Acuario");
                 Console.WriteLine("7. Salir");
 
                 opcion = int.Parse(Console.ReadLine());
                 switch (opcion)
                 {
                     case 1:
-                        Console.WriteLine("Introduzca valor ");
-                        String valor = Console.ReadLine();
-                        f.InsertarPila(valor);
+                        Console.Clear();
+                        Console.WriteLine("Que mamifero vaingresar (mono/oso/leon)? ");
+                        string animal=Console.ReadLine();
+                        Console.WriteLine("Nombre? ");
+                        string nombre = Console.ReadLine();
+                        Console.WriteLine("Temperatura? ");
+                        double temperatura = Double.Parse(Console.ReadLine());
+                        Console.WriteLine("nro patas ");
+                        double ndepat = Double.Parse(Console.ReadLine());
+
+                        Mamiferos uno= f.getMamifero(animal,nombre,temperatura,ndepat);
+                        z.anadirMamifero(uno,10,5,3);
                         Console.ReadKey();
                         break;
                     case 2:
-                        f.EliminarPila();
+                        z.imprimir();
                         Console.ReadKey();
                         break;
                     case 3:
-                        f.MostrarPila();
+                        Console.Clear();
+                        Console.WriteLine("Que Ave va ingresar (Condor/Aguila/Loro)? ");
+                        string ave = Console.ReadLine();
+                        Console.WriteLine("Nombre? ");
+                        string nom = Console.ReadLine();
+                        Console.WriteLine("Peso? ");
+                        double peso = Double.Parse(Console.ReadLine());
+                        Console.WriteLine("tamaño alas ");
+                        double tamañoalas = Double.Parse(Console.ReadLine());
+
+                        Aves dos = f.getAves(ave,nom,peso,tamañoalas);
+                        z.anadirAves(dos, 10, 5, 3);
                         Console.ReadKey();
                         break;
                     case 4:
-                        Console.WriteLine("Introduzca valor ");
-                        valor = Console.ReadLine();
-                        f.InsertarCola(valor);
+                        z.imprimir();
                         Console.ReadKey();
+                        
                         break;
                     case 5:
-                        f.EliminarCola();
+                        Console.Clear();
+                        Console.WriteLine("Que Ave va ingresar (Condor/Aguila/Loro)? ");
+                        string pez = Console.ReadLine();
+                        Console.WriteLine("Nombre? ");
+                        string nomb = Console.ReadLine();
+                        Console.WriteLine("Peso? ");
+                        double longitud = Double.Parse(Console.ReadLine());
+                        
+
+                        Pezes tres = f.getPezes(pez, nomb, longitud);
+                        z.anadirAcuario(tres, 10, 5, 3);
                         Console.ReadKey();
                         break;
                     case 6:
-                        f.MostrarCola();
+                        z.imprimir();
                         Console.ReadKey();
                         break;
 
