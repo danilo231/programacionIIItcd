@@ -1,15 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace clienteCinclono
+namespace Serviciocliente
 {
-    class ClienteCin
+    class clientesincrono
     {
 
-        public static void StartClient(String cadena)
+        static clientesincrono instancia;
+        private clientesincrono()
         {
+        }
 
+        public static clientesincrono getInstancia()
+        {
+            if (instancia == null)
+            {
+                instancia = new clientesincrono();
+            }
+            return instancia;
+        }
+        public double calcularoperacion(String operacion,double a,double b)
+        {
+            string cadena = operacion + "," + a.ToString()+","+b.ToString();
             // Declara un bufer de  datos para recibir datos .  
             byte[] bytes = new byte[1024];
 
@@ -32,8 +49,7 @@ namespace clienteCinclono
                 {
                     sender.Connect(remoteEP);
 
-                    Console.WriteLine("Socket connectado a {0}",
-                        sender.RemoteEndPoint.ToString());
+                        sender.RemoteEndPoint.ToString();
 
                     // codifica datos en un string dentro de un arreglo de bits. 
 
@@ -44,13 +60,13 @@ namespace clienteCinclono
 
                     // Recibe ladespuesta desde el dispositivo remoto .  
                     int bytesRec = sender.Receive(bytes);
-                    Console.WriteLine("Imprime Prueba = {0}",
-                        Encoding.ASCII.GetString(bytes, 0, bytesRec));
+                    string respuesta =( Encoding.ASCII.GetString(bytes, 0, bytesRec));
 
                     // libera el socket.  
                     sender.Shutdown(SocketShutdown.Both);
                     sender.Close();
-                    Console.ReadLine();
+                  
+                    return double.Parse(respuesta);
                 }
                 catch (ArgumentNullException ane)
                 {
@@ -70,6 +86,8 @@ namespace clienteCinclono
             {
                 Console.WriteLine(e.ToString());
             }
+            return 0;
         }
+
     }
 }
