@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "celAlgebre", "celAlgebre\celAlgebre.csproj", "{55CC5F54-CD09-4C45-8087-B87FFED59A78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55CC5F54-CD09-4C45-8087-B87FFED59A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55CC5F54-CD09-4C45-8087-B87FFED59A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55CC5F54-CD09-4C45-8087-B87FFED59A78}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{55CC5F54-CD09-4C45-8087-B87FFED59A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55CC5F54-CD09-4C45-8087-B87FFED59A78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55CC5F54-CD09-4C45-8087-B87FFED59A78}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2394E559-76B3-490B-8C8C-7AF2DC7B7598}
+	EndGlobalSection
+EndGlobal
